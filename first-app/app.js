@@ -1,7 +1,9 @@
-function sayHello(name){
-    console.log('Hello '+ name);
+
+
+
+
+function sayHello(name) {
+    console.log('Hello ' + name);
 }
+sayHello("Eli Correia!!!");
 
-//sayHello('Mosh');
-
-console.log(window);

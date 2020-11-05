@@ -11,7 +11,8 @@ const EventEmitter = require('events');
 const emitter = new EventEmitter(); //This is the an object.
 
 //Register a listener.
-emitter.on('messageLogged', function () {
+emitter.on('messageLogged', function () {:w
+
     console.log('Listener called');
 });
 

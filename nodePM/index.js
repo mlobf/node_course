@@ -16,6 +16,11 @@ let _ = require('./npm-demo/node_modules/underscore');
 let result = _.contains([1,2,3], 2);
 
 console.log(result);
+console.log("=======>");
+console.log('To install a specif version just do:')
+console.log('npm i nameOfPackege@versionNumber')
 
 
-// How to hide the node modules I should put 
+
+
+// How to hide the node modules I should put on git ignore 

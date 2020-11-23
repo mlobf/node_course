@@ -1,5 +1,4 @@
 console.log('==========  Lesson 21 ========');
-
 // On real world app, I will create a Class with all methods's emit and use them on my app
 const EventEmitter = require('events');
 const emitter = new EventEmitter();

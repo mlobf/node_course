@@ -6,8 +6,6 @@
 //  install -> sudo npm i -g nodemon
 // And using .... nodemon instead.
 // Enviroment Varablies
-
-
 const express = require('express');
 
 const app = express();
@@ -40,9 +38,14 @@ app.delete();
     res.send(req.params);
 });
 */
+app.post('/api/courses',(req, res)=> {
+
+});
 
 app.get('/api/courses/:id', (req, res) => {
     const course = courses.find(c =>c.id === parseInt(req.params.id));
+    if (!course) res.status(404).send('The course with the given ID was not found.')//404 - Object not found
+    res.send(course);
 });
 
 // Query parameters are stored 

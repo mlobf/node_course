@@ -6,7 +6,6 @@ console.log("")
 console.log(" npm i nameOfPackage")
 console.log("")
 
-
 let _ = require('./npm-demo/node_modules/underscore');
 
 // Core module 

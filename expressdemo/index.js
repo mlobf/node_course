@@ -1,3 +1,8 @@
+const Joi = require('joi');
+const express = require('express');
+const app = express();
+
+
 // Lets rock on web!!!
 
 // As matter of fact, is better to have your code changes without restarting server.
@@ -6,10 +11,6 @@
 //  install -> sudo npm i -g nodemon
 // And using .... nodemon instead.
 // Enviroment Varablies
-const express = require('express');
-
-const app = express();
-
 app.use(express.json());
 
 const courses = [{
@@ -56,6 +57,15 @@ app.delete();
 
 // Now its time to make https POST requests.
 app.post('/api/courses', (req, res) => {
+    const schema = {
+        name: Joi.string().min(3).required()
+    };
+
+    const result = Joi.validate(req.body, schema);
+    console.log(result);
+
+
+
     if (!req.body.name || req.body.name.length < 3) {
         // 400 status code , that means Bas Request
         res.status(400).send('Name is required and shoud be minimum 3 characters');

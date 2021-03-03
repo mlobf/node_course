@@ -1,15 +1,15 @@
-const path = require('path'); //Load a build in module.
+const path = require("path"); //Load a build in module.
 
 let pathObj = path.parse(__filename);
 
 console.log(pathObj);
 
-const log = require('./logger');
+const log = require("./logger");
 
-log('message');
+log("message");
 
 function sayHello(name) {
-    console.log('Hello ' + name);
+	console.log("Hello " + name);
 }
 
 sayHello("Eli Correia!!!");

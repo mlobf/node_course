@@ -9,7 +9,9 @@ const app = express();
 
 //  install -> sudo npm i -g nodemon
 // And using .... nodemon instead.
-// Enviroment Varablies
+// Environment variables
+//
+
 app.use(express.json());
 
 const courses = [

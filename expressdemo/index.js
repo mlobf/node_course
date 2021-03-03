@@ -1,4 +1,5 @@
-// lest get ready for action.
+// let's get ready for action.
+
 const Joi = require("joi");
 const { response } = require("express");
 const express = require("express");
@@ -82,8 +83,6 @@ app.post("/api/courses", (req, res) => {
 	courses.push(course);
 	res.send(course);
 });
-
-// NEVER TRUST WHAT CLIENT SEND YOU BY DEFAULT, THIS IS A NORM OF MARKET
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}....`));

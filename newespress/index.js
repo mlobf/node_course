@@ -50,14 +50,25 @@ app.post("/api/courses", (req, res) => {
 });
 
 app.put("/api/courses/:id", (req, res) => {
-  
+	const course = arr.find((c) => c.id === parseInt(req.params.id));
+	if (!course) {
+		res.status(404).send("The course with the given id was not allowed");
+	}
+	const schema = {
+		name: Joi.string().min(3).required(),
+	};
+	const result = Joi.valid(req.body, schema);
+	if (result.error) {
+		res.status(400).send(result.error.details[0].message);
+	}
+	course.name = req.body.name;
+	res.send(course);
 	//Look up the course
 	// If not exist, return 404
 	// Validate the course,
 	// If invalid , return 404
 	// Update the course .
 	// Return the updated course to the client
-
 });
 
 // PORT -> environment variable -> the value is set outside application
